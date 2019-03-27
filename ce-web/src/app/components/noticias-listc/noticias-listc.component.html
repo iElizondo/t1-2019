@@ -1,0 +1,18 @@
+<div *ngIf="listaNoticias then carusel else nocarusel"></div>
+
+<ng-template #carusel>
+    <carousel>
+        <slide *ngFor="let noticia of listaNoticias; let i=index">
+            <img [src]="noticia.imagen" alt="first slide" style=" display : block ; width : 100%; ">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>{{noticia.descripcion}}</h3>
+                <button [routerLink]="[ '/noticias-edit/', noticia.id ]"><fa name="edit"></fa>Editar</button>
+            </div>
+        </slide>
+    </carousel>
+</ng-template>
+<ng-template #nocarusel>
+    <div class="alert alert-primary" role="alert">
+        No hay Noticias
+    </div>
+</ng-template>

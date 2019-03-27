@@ -8,19 +8,30 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DatePipe } from '@angular/common';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { DataStorageService} from 'src/app/service/dataStorage/data-storage.service';
+import { NoticiasListcComponent } from './components/noticias-listc/noticias-listc.component';
+
+// RECOMMENDED
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { NoticiasUpsertComponent } from './components/noticias-upsert/noticias-upsert.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    NoticiasListcComponent,
+    NoticiasUpsertComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    CarouselModule.forRoot(),
+    AngularFontAwesomeModule
   ],
-  providers: [ DatePipe],
+  providers: [ DatePipe, DataStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
