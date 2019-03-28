@@ -10,12 +10,12 @@ import notic from '../../../assets/json/noticia.json'
 })
 export class NoticiasListcComponent implements OnInit {
   //st:string[]=["../../../assets/images/img1.png","../../../assets/images/img2.jpg","../../../assets/images/img3.png","../../../assets/images/img1.png","../../../assets/images/img2.jpg","../../../assets/images/img3.png"]
-  public listaNoticias:Noticia[]=notic;
+  public listaNoticias:Noticia[];
   constructor( 
     private _dataStorageService:DataStorageService) 
     {
-      //jo.setObjectValue("noticias","notic");
-      
+      //_dataStorageService.setObjectValue("noticias",notic);
+      this.listaNoticias=_dataStorageService.getObjectValue("noticias");
       //listaNoticias=jo.getObjectValue("noticias");
      }
 

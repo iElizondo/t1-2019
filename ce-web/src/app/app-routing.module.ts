@@ -7,7 +7,7 @@ import { NoticiasUpsertComponent} from './components/noticias-upsert/noticias-up
 
 const routes: Routes = [
   { path: 'noticias/list', component:  NoticiasListcComponent},
-  { path: 'noticias-edit/:id ', component:  NoticiasUpsertComponent},
+  { path: 'noticias-edit/:id', component:  NoticiasUpsertComponent},
   { path: 'noticias-insert', component:  NoticiasUpsertComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'noticias-list'}
 ];
