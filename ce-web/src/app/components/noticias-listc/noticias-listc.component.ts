@@ -3,7 +3,6 @@ import { Noticia } from '../../clases/noticia/noticia';
 import { DataStorageService } from '../../service/dataStorage/data-storage.service'
 import notic from '../../../assets/json/noticia.json'
 
-
 @Component({
   selector: 'app-noticias-listc',
   templateUrl: './noticias-listc.component.html',
