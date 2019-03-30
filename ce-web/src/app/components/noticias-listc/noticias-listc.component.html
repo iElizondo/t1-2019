@@ -6,7 +6,7 @@
             <img [src]="noticia.imagen" alt="first slide" style=" display : block ; width : 100%; ">
             <div class="carousel-caption d-none d-md-block">
                 <h3>{{noticia.descripcion}}</h3>
-                <button [routerLink]="[ '/noticias-edit/', noticia.id ]"><fa name="edit"></fa>Editar</button>
+                <button [routerLink]="[ '/private/noticias-edit/', noticia.id ]"><fa name="edit"></fa>Editar</button>
             </div>
         </slide>
     </carousel>
