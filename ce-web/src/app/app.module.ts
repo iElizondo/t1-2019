@@ -15,7 +15,7 @@ import { NoticiasListcComponent } from './components/noticias-listc/noticias-lis
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { NoticiasUpsertComponent } from './components/noticias-upsert/noticias-upsert.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { PrivateComponent } from './components/private/private.component';
 import { LoginComponent } from './components/login/login.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
@@ -37,6 +37,7 @@ import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     CarouselModule.forRoot(),
     AngularFontAwesomeModule,
+    FormsModule,
     ReactiveFormsModule
   ],
   providers: [ DatePipe, DataStorageService],
